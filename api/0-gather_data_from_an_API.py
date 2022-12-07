@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 ''' Return information about his/her TODO list progress from an REST API '''
-from requests
+from requests import get
 from sys import argv
 
 
@@ -22,12 +22,12 @@ def apiRest():
     for vartask in urlTask:
         if vartask['userId'] == idUser:
             if vartask['completed'] is True:
-                listTask.append(varTask['title'])
+                listTask.append(vartask['title'])
                 numberTask += 1
             totalNumberTask += 1
     print('Employee {} is done with tasks({}/{}):'.format(nameEmploye,
                                                           numberTask,
-                                                          totalNumberTask))
+                                                          totalNumberTtask))
     for title in listTask:
         print('\t {}'.format(title))
 
