@@ -14,7 +14,7 @@ def apiRest():
 
     urlUsers = get('https://jsonplaceholder.typicode.com/users').json()
     for varUser in urlUsers:
-        if valUser['id'] == idUser:
+        if varUser['id'] == idUser:
             nameEmploye = varUser['name']
             break
 
