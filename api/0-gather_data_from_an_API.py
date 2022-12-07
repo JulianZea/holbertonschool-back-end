@@ -27,7 +27,7 @@ def apiRest():
             totalNumberTask += 1
     print('Employee {} is done with tasks({}/{}):'.format(nameEmploye,
                                                           numberTask,
-                                                          totalNumberTtask))
+                                                          totalNumberTask))
     for title in listTask:
         print('\t {}'.format(title))
 
