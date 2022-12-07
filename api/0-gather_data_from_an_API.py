@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-""" the employee TODO list progress """
-from resquests
+''' Return information about his/her TODO list progress from an REST API '''
+from requests
 from sys import argv
 
 
 def apiRest():
-    """ collect data from an api """
+    ''' Gather data from an API '''
     idUser = int(argv[1])
     nameEmploye = ''
     numberTask = 0
@@ -13,15 +13,15 @@ def apiRest():
     listTask = []
 
     urlUsers = get('https://jsonplaceholder.typicode.com/users').json()
-    for varUser in urlUsers:
-        if varUser['id'] == idUser:
-            nameEmploye = varUser['name']
+    for varuser in urlUsers:
+        if varuser['id'] == idUser:
+            nameEmploye = varuser['name']
             break
 
     urlTask = get('https://jsonplaceholder.typicode.com/todos').json()
-    for varTask in urlTask:
-        if varTask['userId'] == idUser:
-            if varTask['completed'] is true:
+    for vartask in urlTask:
+        if vartask['userId'] == idUser:
+            if vartask['completed'] is True:
                 listTask.append(varTask['title'])
                 numberTask += 1
             totalNumberTask += 1
