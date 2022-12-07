@@ -4,10 +4,6 @@ from resquests
 from sys import argv
 
 
-if __name__ == '__main__':
-    api_rest()
-
-
 def apiRest():
     """ collect data from an api """
     idUser = int(argv[1])
@@ -34,3 +30,7 @@ def apiRest():
                                                           totalNumberTask))
     for title in listTask:
         print('\t {}'.format(title))
+
+
+if __name__ == '__main__':
+    api_rest()
